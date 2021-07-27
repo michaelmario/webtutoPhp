@@ -1,0 +1,70 @@
+.then(data =>{
+		 console.log(data.querySelectorAll("title"))
+		 const items = data.querySelectorAll("item");
+    let html = ``;
+    items.forEach(el => {
+    _('output').innerHTML  = `
+	<article>
+	  <img src="${el.querySelector("link").innerHTML}/image/large.png" alt="">
+	  <h2>
+		<a href="${el.querySelector("link").innerHTML}" target="_blank" rel="noopener">
+		  ${el.querySelector("title").innerHTML}
+		</a>
+	  </h2>
+	</article>
+  `; 
+  }); 
+
+  function myFunction(data) {
+	console.log(data)
+	let output = _("output");
+	let xmlDoc = data;
+	let x = xmlDoc.getElementsByTagName("title");
+	let pubDate = xmlDoc.getElementsByTagName("pubDate");
+	let items = xmlDoc.querySelectorAll("item");
+	let enclosures = xmlDoc.querySelectorAll("enclosure");
+	
+	
+	let card = document.createElement('div');
+	let hr = document.createElement('hr');
+	card.className = "w3-card w3-margin w3-padding specialcard";
+	items.forEach(el => {
+    let itemTitles = el.querySelectorAll("title");
+     itemTitles.classList = "w3-margin" ;
+
+	let itemDescriptions = el.querySelectorAll("description");
+	enclosures.forEach(item => {
+		card.appendChild(item);
+	})
+    
+    itemTitles.forEach(title => {		
+		card.append(title);
+	})
+	card.append(hr);
+	itemDescriptions.forEach(descrip => {
+		card.append(descrip);
+	})
+	
+	
+	});
+	
+	
+	let h2 = document.createElement('h2');
+	let h4 = document.createElement('h4');
+	h2.innerHTML = x[0].childNodes[0].nodeValue;
+	h4.innerHTML = pubDate[0].childNodes[0].nodeValue;
+	//card.append(itempubDates);
+	output.appendChild(h2);
+	output.appendChild(h4);
+	output.append(card);
+
+}
+
+else {
+			if (typeof(obj[nodeName].push) !== "undefined") {
+				var old = obj[nodeName];
+				obj[nodeName] = [];
+				obj[nodeName].push(old);
+			}
+			obj[nodeName].push(xmlToJson(item));
+		}
