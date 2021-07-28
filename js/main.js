@@ -73,3 +73,7 @@ function myFunction(xml) {
     }
     _("output").innerHTML =txt;
 }
+
+ function openModal(){
+	_('mauriModal').style.display='block';
+}
