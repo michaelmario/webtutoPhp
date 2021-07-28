@@ -40,7 +40,7 @@ if(isset($_POST["u"])){
     $query = mysqli_query($db_conx, $sql); 
 	$u_check = mysqli_num_rows($query);
 	// -------------------------------------------
-)	$sql = "SELECT id FROM users WHERE email='$e' LIMIT 1";
+	$sql = "SELECT id FROM users WHERE email='$e' LIMIT 1";
     $query = mysqli_query($db_conx, $sql); 
 	$e_check = mysqli_num_rows($query);
 	// FORM DATA ERROR HANDLING
@@ -64,8 +64,6 @@ if(isset($_POST["u"])){
 	    // Begin Insertion of data into the database
 		// Hash the password and apply your own mysterious unique salt
 		$cryptpass = password_hash($p,PASSWORD_BCRYPT);
-		//include_once ("php_includes/randStrGen.php");
-		//$p_hash = randStrGen(20)."$cryptpass".randStrGen(20);
 		// Add user info into the database table for the main site table
 		$sql = "INSERT INTO users (username, email, password, gender, country, ip, signup, lastlogin, notescheck)       
 		        VALUES('$u','$e','$cryptpass','$g','$c','$ip',now(),now(),now())";
