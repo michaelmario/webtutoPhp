@@ -77,3 +77,8 @@ function myFunction(xml) {
  function openModal(){
 	_('mauriModal').style.display='block';
 }
+function openLogin(){
+	_('loginModal').style.display='block';
+}
+
+

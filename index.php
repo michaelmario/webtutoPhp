@@ -44,26 +44,52 @@
                     </div>
                     <br /><br />
                     <div class="w3-col m12 sm12 w3-margin">
-                      <button class="w3-button w3-green w3-hover-black" id="signupbtn" onclick="signup()">Create Account</button>
+                        <button class="w3-button w3-green w3-hover-black" id="signupbtn" onclick="signup()">Create Account</button>
                         <span id="status"></span>
                         <div class="w3-col m3 sm12">
                             <div>
                                 <a href="#" onclick="return false" onmousedown="openTerms()">
-                                View the Terms Of Use
-                            </a>
-                        </div>
+                                    View the Terms Of Use
+                                </a>
+                            </div>
                         </div>
                         <div class="w3-margin-top" id="terms" style="display:none;">
                             <input class="form-check-input" type="checkbox" value="" id="check" required="">
                             <label class="form-check-label" for="invalidCheck2">
-                                 BY SUBMITTING THIS FORM, I AGREE THAT THE INFORMATION
-                                 SEIZURES ARE EXPLOITED AS PART OF THE REQUEST FOR
-                                 PROPOSALS AND THE COMMERCIAL RELATIONSHIP WHICH MAY
-                                 RESULT.
+                                BY SUBMITTING THIS FORM, I AGREE THAT THE INFORMATION
+                                SEIZURES ARE EXPLOITED AS PART OF THE REQUEST FOR
+                                PROPOSALS AND THE COMMERCIAL RELATIONSHIP WHICH MAY
+                                RESULT.
                             </label>
 
                         </div>
                     </div>
+                </form>
+            </div>
+            <footer class="w3-container w3-indigo w3-center">
+                <h3>MauriCode Academy Learning Channel<br>
+                    <small class="w3-text-orange">Tutoriel en créole Mauricien</small>
+                </h3>
+                <p>&copy;2021 MauricodeAcademy</p>
+            </footer>
+        </div>
+    </div>
+    <div id="loginModal" class="w3-modal">
+        <div class="w3-modal-content">
+            <div class="w3-container w3-indigo w3-center">
+                <span onclick="_('loginModal').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                <h2>login here</h2>
+            </div>
+            <div class="w3-container w3-center">
+                <form id="loginform" onsubmit="return false;">
+                    <div>Email Address:</div>
+                    <input type="text" id="loginEmail" onfocus="emptyElement('status')" maxlength="88">
+                    <div>Password:</div>
+                    <input type="password" id="loginPassword" onfocus="emptyElement('status')" maxlength="100">
+                    <br /><br />
+                    <button id="loginbtn" class="w3-button w3-green w3-hover-black" onclick="login()">Log In</button>
+                    <p id="status"></p>
+                    <a href="#">Forgot Your Password?</a>
                 </form>
             </div>
             <footer class="w3-container w3-indigo w3-center">
@@ -112,6 +138,9 @@
     </script>
     <script type="text/javascript">
         <?php include 'js/signup.js'; ?>
+    </script>
+    <script type="text/javascript">
+        <?php include 'js/login.js'; ?>
     </script>
 </body>
 

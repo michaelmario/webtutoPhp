@@ -1,11 +1,29 @@
-body { margin: 0px; font-family: Tahoma, Geneva, sans-serif; font-size: 14px; }
+body { 
+    margin: 0px;
+    background-color:black;
+      font-family:'Crimson Text',
+      serif Geneva, sans-serif;
+       font-size: 14px;
+     }
 /* PAGE TOP */
-
+.container{
+    width:90%;
+    margin:20px auto;
+    background-color: blanchedalmond;
+    margin-top:-10px;
+    
+}
+section{
+    background-color:#ccc   
+}
 header{
     background-color: cornflowerblue;
     width:100%;
     height:200px;
     margin-top:-20px;
+}
+h3{
+    font-family:'Courier New', Courier, monospace;
 }
 nav{
     text-align:center;
@@ -26,7 +44,8 @@ section{
 
 aside{
     border:1px solid #000;
-    height:650px;
+    min-height:650px;
+
 }
 aside ul> li{
  font-size:20px;
@@ -85,4 +104,102 @@ padding:10px;
     font-weight: bolder;
     margin-top:10px;
 }
-
+.profile{
+    text-align:center;
+    margin-top:20px;
+   
+}
+.profile > img{ 
+ box-shadow: 5px 10px 8px #888888;
+text-align: center;
+ margin: 0 auto; 
+ border:5px solid #ccc;
+ max-width: 150px; 
+ border-radius: 50%;
+ position:relative;
+ z-index: 4; 
+}
+.asideorange{
+    margin-top:-20px;
+    margin-left:10px;
+    
+}
+@media screen and (max-width: 768px) {
+    .asideorange{
+        margin-top:10px; 
+        margin-left:0px;  
+    }  
+}
+@media screen and (width:1024px) {
+    .divdeLeft {
+      margin-left:0px;
+    }
+}
+.titleorange{
+ margin-left:110px;
+}
+.barAdress{
+    margin-top:-10px;
+    font-size: 1.5rem;
+    text-align:center;
+}
+.separator{
+ width:30px;
+ border-bottom:2px solid rgb(163, 156, 156);
+ font-weight: bold;
+ }
+ .ulText{
+    border-bottom:2px solid rgb(163, 156, 156);
+    margin-bottom: 20px;
+ }
+ .ulText ul li{
+     font-size: 19px;
+ }
+ .divdeLeft{
+    margin-left:20px;  
+ }
+ .divdeLeft ul li{
+     display:inline-block;
+     margin-left:10px;
+ }
+ .divdeLeft h3{
+border-bottom: 2px solid #da9009; 
+width:65px;
+padding:5px;
+}
+.startBox {
+    display: flex;
+    font-size: 12px;
+    padding-top: 5px;
+    color: #da9009;
+    margin-left: -10px;
+}
+.unCheckStart i {
+    color: #ccc;
+}
+.fab{
+    color: #da9009;
+    font-size: 18px;
+}
+.fas{
+    color:#da9009
+}
+.far{
+    color:#da9009
+}
+.CENTRESINTERET ul li{
+    display: inline-block;
+}
+.iconcircle{
+    font-size: 80px;
+    border: 2px solid #0a1425;
+    margin-right:20px;
+    padding:10px;
+    border-radius: 15px;
+}
+.qualitePersonelle{
+font-size:1.2em;
+font-weight: bolder;
+color:#da9009;
+font-family: 'Courier New', Courier, monospace;
+}

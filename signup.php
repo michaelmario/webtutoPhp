@@ -73,14 +73,14 @@ if(isset($_POST["u"])){
 		$sql = "INSERT INTO useroptions (id, username, background) VALUES ('$uid','$u','original')";
 		$query = mysqli_query($db_conx, $sql);
 		/* Create directory(folder) to hold each user's files(pics, MP3s, etc.)*/
-		if (!file_exists("user/$u")) {
+		/*if (!file_exists("user/$u")) {
 			mkdir("user/$u", 0755 , true);
-		}
+		}*/
 		// Email the user their activation link
 		$to = "$e";							 
 		$from = "auto_responder@mauricodeacademy.com";
-		$subject = 'MauricodeAcademy Account Activation';
-		$message = '<!DOCTYPE html><html><head><meta charset="UTF-8"><title>yoursitename Message</title></head><body style="margin:0px; font-family:Tahoma, Geneva, sans-serif;"><div style="padding:10px; background:#333; font-size:24px; color:#CCC;"><a href="http://www.yoursitename.com"><img src="http://www.yoursitename.com/images/logo.png" width="36" height="30" alt="yoursitename" style="border:none; float:left;"></a>yoursitename Account Activation</div><div style="padding:24px; font-size:17px;">Hello '.$u.',<br /><br />Click the link below to activate your account when ready:<br /><br /><a href="http://www.yoursitename.com/activation.php?id='.$uid.'&u='.$u.'&e='.$e.'&p='.$cryptpass.'">Click here to activate your account now</a><br /><br />Login after successful activation using your:<br />* E-mail Address: <b>'.$e.'</b></div></body></html>';
+		$subject = 'Mauricode Academy Account Activation';
+		$message = '<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Mauricode Academy Message</title></head><body style="margin:0px; font-family:Tahoma, Geneva, sans-serif;"><div style="padding:10px; background:#333; font-size:24px; color:#CCC;"><a href="https://mauricodeacademy.web.app/"><img src="https://firebasestorage.googleapis.com/v0/b/mauricodeacademy.appspot.com/o/images%2FTransLogo.png?alt=media&token=4e62cd1f-5fb9-42f2-ad90-060a9a11a6a3" width="36" height="30" alt="Mauricode Academy" style="border:none; float:left;"></a>Mauricode Academy Account Activation</div><div style="padding:24px; font-size:17px;">Hello '.$u.',<br /><br />Click the link below to activate your account when ready:<br /><br /><a href="https://mauricodeacademy.web.app/activation.php?id='.$uid.'&u='.$u.'&e='.$e.'&p='.$cryptpass.'">Click here to activate your account now</a><br /><br />Login after successful activation using your:<br />* E-mail Address: <b>'.$e.'</b></div></body></html>';
 		$headers = "From: $from\n";
         $headers .= "MIME-Version: 1.0\n";
         $headers .= "Content-type: text/html; charset=iso-8859-1\n";
