@@ -5,14 +5,14 @@ body {
       serif Geneva, sans-serif;
        font-size: 14px;
      }
-/* PAGE TOP */
+/* PAGE TOP 
 .container{
     width:90%;
     margin:20px auto;
     background-color: blanchedalmond;
     margin-top:-10px;
     
-}
+}*/
 section{
     background-color:#ccc   
 }
@@ -119,11 +119,167 @@ text-align: center;
  position:relative;
  z-index: 4; 
 }
-.asideorange{
-    margin-top:-20px;
-    margin-left:10px;
-    
-}
+
+.container {
+    width: 90%;
+    margin: 20px auto;
+    background-color: blanchedalmond;
+    margin-top: -10px;
+  }
+  h1,
+  h3,
+  h4,
+  h6 {
+    font-family: "Courier New", Courier, monospace;
+    text-shadow: 2px 2px 4px #000000;
+  }
+  .profile {
+    text-align: center;
+    margin-top: 20px;
+    box-shadow: 5px 10px 8px #888888;
+  }
+  .profile > img {
+    text-align: center;
+    margin: 0 auto;
+    border: 5px solid #ccc;
+    max-width: 150px;
+    border-radius: 50%;
+    position: relative;
+    z-index: 4;
+  }
+  .titleblue {
+    margin-left: 110px;
+    font-size: 1.5rem;
+    padding-bottom: 20px;
+    border-bottom: 5px solid #da9009;
+  }
+  .barAdress span {
+    font-size: 1.5rem;
+  }
+  .boxSocial {
+    width: 50%;
+    box-shadow: 5px 10px 18px #888888;
+    margin-left: 50px;
+    margin-right: 10px;
+  }
+  /*aside */
+  .aside {
+    margin-top: -50px;
+    border: 1px solid #ccc;
+    min-height: 650px;
+    box-shadow: 5px 10px 18px #888888;
+  }
+  .aside ul > li {
+    font-size: 20px;
+    font-weight: bolder;
+  }
+  
+  .barAdress {
+    margin-top: -5px;
+    margin-left: 20%;
+  }
+  
+  .separator {
+    width: 30px;
+    border-bottom: 2px solid rgb(163, 156, 156);
+    font-weight: bold;
+  }
+  .ulText {
+    border-bottom: 2px solid rgb(163, 156, 156);
+    margin-bottom: 20px;
+  }
+  .ulText ul li {
+    font-size: 19px;
+  }
+  .divdeLeft {
+    margin-left: 10px;
+  }
+  .divdeLeft ul li {
+    display: inline-block;
+    margin-left: 10px;
+  }
+  .divdeLeft h3 {
+    border-bottom: 2px solid #da9009;
+    width: 65px;
+    padding: 5px;
+  }
+  .startBox {
+    display: flex;
+    font-size: 12px;
+    padding-top: 5px;
+    color: #da9009;
+    margin-left: -10px;
+  }
+  .unCheckStart i {
+    color: #ccc;
+  }
+  .fab {
+    color: #da9009;
+    font-size: 18px;
+  }
+  .fas {
+    color: #da9009;
+  }
+  .far {
+    color: #da9009;
+  }
+  .CENTRESINTERET {
+    box-shadow: 5px 10px 18px #888888;
+    padding: 20px;
+    text-align: center;
+  }
+  .CENTRESINTERET ul li {
+    display: inline-block;
+  }
+  .iconcircle {
+    font-size: 80px;
+    border: 2px solid #0a1425;
+    margin-right: 20px;
+    padding: 10px;
+    border-radius: 15px;
+  }
+  .qualitePersonelle {
+    font-size: 1.2em;
+    font-weight: bolder;
+    color: #da9009;
+    font-family: "Courier New", Courier, monospace;
+  }
+  
+  .copyList {
+    list-style: none;
+  }
+  .copyList a {
+    text-decoration: none;
+  }
+  /* CSS POUR LES PETITE ECRANS */
+  @media (max-width: 768px) {
+    aside {
+      margin-top: 5px;
+    }
+    .titleblue {
+      margin-left: 10px;
+    }
+    .barAdress {
+      margin-top: 0px;
+      margin-left: 13%;
+    }
+    .startBox {
+      display: flex;
+      font-size: 10px;
+      color: #da9009;
+      margin-left: -40px;
+      overflow: hidden;
+    }
+    .boxSocial {
+      display: none;
+    }
+    footer {
+      height: 130px;
+      width: 100%;
+    }
+  }
+  
+
 @media screen and (max-width: 768px) {
     .asideorange{
         margin-top:10px; 
